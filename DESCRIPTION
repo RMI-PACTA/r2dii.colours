@@ -1,0 +1,17 @@
+Package: r2dii.colours
+Title: 2 Degrees Investing Colour Palettes in Different Formats
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Monika",
+           family = "Furdyna",
+           role = c("aut", "ctr", "cre"),
+           email = "monika.furdyna@gmail.com",
+           comment = c(ORCID = "0000-0002-3728-0646"))
+Description: Get colour values from different colour palettes used by 2 Degrees 
+  Investing (2DII) organization in their reserach streams. Different ways to 
+  obtain the colour values are available: dataframe or a function call.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
