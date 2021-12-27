@@ -17,3 +17,7 @@ test_that("Works with a user-defined palette", {
       )
   expect_snapshot_output(get_colours(c("white"), palette = user_palette))
 })
+
+test_that("Returns vector of hex codes in order of `colour_names` passed", {
+  expect_true(all(get_colours(c("red", "blue")) != get_colours(c("blue", "red"))))
+})

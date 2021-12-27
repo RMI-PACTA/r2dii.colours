@@ -2,7 +2,9 @@
 
 export("%>%")
 export(get_colours)
+importFrom(dplyr,arrange)
 importFrom(dplyr,filter)
+importFrom(dplyr,mutate)
 importFrom(dplyr,pull)
 importFrom(glue,glue)
 importFrom(magrittr,"%>%")
