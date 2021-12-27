@@ -17,7 +17,8 @@ names of colours for which you want to retrieve the hex values.}
 should contain columns \code{label} and \code{hex}.}
 }
 \value{
-A vector of strings with hex codes.
+A vector of strings with hex codes in order specified by
+\code{colour_names}.
 }
 \description{
 Retrieve colour hex values from a palette
