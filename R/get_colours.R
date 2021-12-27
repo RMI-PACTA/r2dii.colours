@@ -3,9 +3,10 @@
 #' @param colour_names Character string or a vector of character strings with
 #'   names of colours for which you want to retrieve the hex values.
 #' @param palette The dataframe from which the hex values are retrieved. It
-#' should contain columns `label` and `hex`.
+#'   should contain columns `label` and `hex`.
 #'
-#' @return A vector of strings with hex codes.
+#' @return A vector of strings with hex codes in order specified by
+#'   `colour_names`.
 #' @export
 #'
 #' @examples
