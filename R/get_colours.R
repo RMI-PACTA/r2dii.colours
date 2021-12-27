@@ -1,22 +1,24 @@
-get_colours <- function(
-  palette_name = "palette.1in1000.plot",
-  colour_name = "red"
-  ) {
-  check_palette_name(palette_name)
-  check_colour_name(palette_name, colour_name)
-  palette_colours <- eval(palette_name)
+#' Retrieve colour hex values from a palette
+#'
+#' @param colour_names Character string or a vector of character strings with
+#'   names of colours for which you want to retrieve the hex values.
+#' @param palette The dataframe from which the hex values are retrieved. It
+#' should contain columns `label` and `hex`.
+#'
+#' @return A vector of strings with hex codes.
+#' @export
+#'
+#' @examples
+#' # use default palette
+#' get_colours(c("red", "blue"))
+#'
+#' # specify which palette to use
+#' get_colours(c("red", "green"), palette = palette.1in1000.goodbad)
+get_colours <- function(colour_names = "red", palette = r2dii.colours::palette.1in1000.plot) {
+  check_colour_name(palette, colour_names)
 
-  if (colour_name %in% palette_colours$label) {
-    colour_hex <- palette_colours %>%
-      filter(.data$label == colour_name) %>%
+  colour_hex <- palette %>%
+      filter(.data$label %in% colour_names) %>%
       pull(.data$hex)
-    return(colour_hex)
-  } else {
-    rlang::abort(
-      c(
-      glue("No colour in {palette_name} with a given `colour_name`."),
-      x = glue("Possible colour names in the palette: {toString(palette_colours$label)}.")
-      )
-    )
-  }
+  return(colour_hex)
 }

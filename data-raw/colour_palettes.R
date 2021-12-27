@@ -1,3 +1,4 @@
+# styler: off
 palette.1in1000.background <- "#E9E4E3"
 
 palette.1in1000.goodbad <- tibble::tribble(
@@ -22,3 +23,13 @@ palette.1in1000.plot <- tibble::tribble(
       "pink", "#f53d9b",
       "grey", "#BAB6B5"
     )
+
+# styler: on
+
+usethis::use_data(
+  palette.1in1000.background,
+  palette.1in1000.goodbad,
+  palette.1in1000.plot,
+  internal = FALSE,
+  overwrite = TRUE
+)
