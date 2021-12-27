@@ -1,0 +1,72 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  fig.align = "left",
+  out.width = "100%"
+)
+```
+
+# r2dii.colours <a href='https://github.com/2DegreesInvesting/r2dii.colours'><img src='https://imgur.com/A5ASZPE.png' align='right' height='43' /></a>
+
+<!-- badges: start -->
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)
+[![Codecov test coverage](https://codecov.io/gh/2DegreesInvesting/r2dii.colours/branch/master/graph/badge.svg)](https://app.codecov.io/gh/2DegreesInvesting/r2dii.colours?branch=master)
+[![R-CMD-check](https://github.com/2DegreesInvesting/r2dii.colours/workflows/R-CMD-check/badge.svg)](https://github.com/2DegreesInvesting/r2dii.colours/actions)
+[![CRAN status](https://www.r-pkg.org/badges/version/r2dii.colours)](https://CRAN.R-project.org/package=r2dii.colours)
+<!-- badges: end -->
+
+The goal of r2dii.colours is to provide you with an easy access to colours from 
+palettes created for different research streams at 2DII.
+
+## Installation
+
+You can install the development version from GitHub with:
+
+```r
+# install.packages("devtools")
+devtools::install_github("2DegreesInvesting/r2dii.colours")
+```
+
+## Examples
+
+The r2dii.plot package can be used to retrieve datasets containing 2DII colour 
+palettes or to get hex codes of particular colours from a palette.
+
+```{r setup}
+library(munsell)
+library(ggplot2)
+library(r2dii.colours)
+```
+
+For example, one can retrieve the colour palette dataset defined for plots in 
+1 in 1000 research stream. 
+
+```{r}
+palette <- palette.1in1000.plot
+palette
+
+munsell::plot_hex(palette$hex)
+```
+
+Or one can retrieve the hex codes from a particular palette and use them in 
+their plots.
+
+```{r}
+colours <- get_colours(
+  c("green", "grey", "red"), 
+  palette = palette.1in1000.goodbad
+  )
+
+ggplot(mtcars, aes(x = wt, y = mpg, colour = factor(cyl))) + 
+  geom_point() +
+  scale_colour_manual(values = colours)
+```
