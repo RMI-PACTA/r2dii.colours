@@ -23,5 +23,5 @@ get_colours <- function(colour_names = "red", palette = r2dii.colours::palette.1
       mutate(label = factor(.data$label, levels = colour_names)) %>%
       arrange(.data$label) %>%
       pull(.data$hex)
-  return(colour_hex)
+  colour_hex
 }
