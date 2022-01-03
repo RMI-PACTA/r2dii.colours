@@ -1,6 +1,6 @@
 # With bad colour name errors gracefully
 
-    No colour in r2dii.colours::palette.1in1000.plot with a given `colour_name`.
+    No colour in r2dii.colours::palette_1in1000_plot with a given `colour_name`.
     x Possible colour names in the palette: black, white, red, blue, green, yellow, violet, orange, pink, grey.
     i You can change the palette by specifying the `palette` argument.
 

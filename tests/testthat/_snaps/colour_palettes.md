@@ -1,11 +1,11 @@
 # outputs the expected snapshot
 
     Code
-      palette.1in1000.background
+      palette_1in1000_background
     Output
       [1] "#E9E4E3"
     Code
-      palette.1in1000.goodbad
+      palette_1in1000_goodbad
     Output
       # A tibble: 5 x 2
         label       hex    
@@ -16,7 +16,7 @@
       4 dark_grey   #8B8888
       5 darker_grey #656262
     Code
-      palette.1in1000.plot
+      palette_1in1000_plot
     Output
       # A tibble: 10 x 2
          label  hex    
