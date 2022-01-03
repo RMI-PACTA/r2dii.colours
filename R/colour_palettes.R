@@ -7,11 +7,11 @@
 #' @name colour_palettes
 #'
 #' @examples
-#' palette.1in1000.background
+#' palette_1in1000_background
 #'
-#' palette.1in1000.goodbad
+#' palette_1in1000_goodbad
 #'
-#' palette.1in1000.plot
+#' palette_1in1000_plot
 NULL
 
 #' @rdname colour_palettes
@@ -20,3 +20,10 @@ NULL
 "palette.1in1000.goodbad"
 #' @rdname colour_palettes
 "palette.1in1000.plot"
+
+#' @rdname colour_palettes
+"palette_1in1000_background"
+#' @rdname colour_palettes
+"palette_1in1000_goodbad"
+#' @rdname colour_palettes
+"palette_1in1000_plot"
