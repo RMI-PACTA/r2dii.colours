@@ -6,7 +6,7 @@
 \usage{
 get_colours(
   colour_names = "red",
-  palette = r2dii.colours::palette.1in1000.plot
+  palette = r2dii.colours::palette_1in1000_plot
 )
 }
 \arguments{
@@ -28,5 +28,5 @@ Retrieve colour hex values from a palette
 get_colours(c("red", "blue"))
 
 # specify which palette to use
-get_colours(c("red", "green"), palette = palette.1in1000.goodbad)
+get_colours(c("red", "green"), palette = palette_1in1000_goodbad)
 }
