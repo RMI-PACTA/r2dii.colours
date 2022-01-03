@@ -42,7 +42,7 @@ For example, one can retrieve the colour palette dataset defined for
 plots in 1 in 1000 research stream.
 
 ``` r
-palette <- palette.1in1000.plot
+palette <- palette_1in1000_plot
 palette
 #> # A tibble: 10 × 2
 #>    label  hex    
@@ -69,7 +69,7 @@ in their plots.
 ``` r
 colours <- get_colours(
   c("green", "grey", "red"), 
-  palette = palette.1in1000.goodbad
+  palette = palette_1in1000_goodbad
   )
 
 ggplot(mtcars, aes(x = wt, y = mpg, colour = factor(cyl))) + 
