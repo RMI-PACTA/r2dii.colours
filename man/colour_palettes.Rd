@@ -9,6 +9,13 @@
 \alias{palette_1in1000_background}
 \alias{palette_1in1000_goodbad}
 \alias{palette_1in1000_plot}
+\alias{palette_2dii_plot}
+\alias{palette_2dii_scenario}
+\alias{palette_2dii_sector}
+\alias{palette_2dii_power}
+\alias{palette_2dii_automotive}
+\alias{palette_2dii_oil_gas}
+\alias{palette_2dii_fossil_fuels}
 \title{Colour palette datasets}
 \format{
 An object of class \code{character} of length 1.
@@ -22,6 +29,20 @@ An object of class \code{character} of length 1.
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 5 rows and 2 columns.
 
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 10 rows and 2 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 9 rows and 2 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 5 rows and 2 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 8 rows and 2 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 6 rows and 2 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 7 rows and 2 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 2 rows and 2 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 3 rows and 2 columns.
 }
 \usage{
 palette.1in1000.background
@@ -35,6 +56,20 @@ palette_1in1000_background
 palette_1in1000_goodbad
 
 palette_1in1000_plot
+
+palette_2dii_plot
+
+palette_2dii_scenario
+
+palette_2dii_sector
+
+palette_2dii_power
+
+palette_2dii_automotive
+
+palette_2dii_oil_gas
+
+palette_2dii_fossil_fuels
 }
 \description{
 All datasets have at least two columns:
