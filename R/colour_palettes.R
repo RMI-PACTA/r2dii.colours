@@ -15,13 +15,6 @@
 NULL
 
 #' @rdname colour_palettes
-"palette.1in1000.background"
-#' @rdname colour_palettes
-"palette.1in1000.goodbad"
-#' @rdname colour_palettes
-"palette.1in1000.plot"
-
-#' @rdname colour_palettes
 "palette_1in1000_background"
 #' @rdname colour_palettes
 "palette_1in1000_goodbad"

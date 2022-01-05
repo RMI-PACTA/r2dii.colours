@@ -3,9 +3,6 @@
 \docType{data}
 \name{colour_palettes}
 \alias{colour_palettes}
-\alias{palette.1in1000.background}
-\alias{palette.1in1000.goodbad}
-\alias{palette.1in1000.plot}
 \alias{palette_1in1000_background}
 \alias{palette_1in1000_goodbad}
 \alias{palette_1in1000_plot}
@@ -18,12 +15,6 @@
 \alias{palette_2dii_fossil_fuels}
 \title{Colour palette datasets}
 \format{
-An object of class \code{character} of length 1.
-
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 5 rows and 2 columns.
-
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 10 rows and 2 columns.
-
 An object of class \code{character} of length 1.
 
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 5 rows and 2 columns.
@@ -45,12 +36,6 @@ An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) w
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 3 rows and 2 columns.
 }
 \usage{
-palette.1in1000.background
-
-palette.1in1000.goodbad
-
-palette.1in1000.plot
-
 palette_1in1000_background
 
 palette_1in1000_goodbad
