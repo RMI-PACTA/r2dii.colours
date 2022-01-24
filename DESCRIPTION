@@ -20,10 +20,12 @@ Imports:
     glue,
     magrittr,
     rlang,
-    tibble
+    tibble,
+    ggplot2
 Depends: 
     R (>= 2.10)
 Suggests: 
+    r2dii.plot,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 URL: https://2degreesinvesting.github.io/r2dii.colours
