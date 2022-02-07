@@ -6,11 +6,15 @@
 \alias{scale_fill_2dii}
 \title{Custom 2DII colour and fill scales}
 \usage{
-scale_colour_2dii(...)
+scale_colour_2dii(colour_groups = NULL, ...)
 
-scale_fill_2dii(...)
+scale_fill_2dii(colour_groups = NULL, ...)
 }
 \arguments{
+\item{colour_groups}{A vector containing groups variable to which colours are
+assigned. It is needed when the data assigned to \code{colour} aesthetic are
+not all contained in colour aliases of the palette.}
+
 \item{...}{Other parameters passed on to \code{ggplot2::discrete_scale()}.}
 }
 \value{

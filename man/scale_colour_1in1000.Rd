@@ -6,11 +6,15 @@
 \alias{scale_fill_1in1000}
 \title{Custom 1 in 1000 colour and fill scales}
 \usage{
-scale_colour_1in1000(...)
+scale_colour_1in1000(colour_groups = NULL, ...)
 
-scale_fill_1in1000(...)
+scale_fill_1in1000(colour_groups = NULL, ...)
 }
 \arguments{
+\item{colour_groups}{A vector containing groups variable to which colours are
+assigned. It is needed when the data assigned to \code{colour} aesthetic are
+not all contained in colour aliases of the palette.}
+
 \item{...}{Other parameters passed on to \code{ggplot2::discrete_scale()}.}
 }
 \value{

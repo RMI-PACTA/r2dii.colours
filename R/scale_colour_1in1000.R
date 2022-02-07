@@ -2,6 +2,9 @@
 #'
 #' A custom discrete colour and fill scales with colours from 1 in 1000 palette.
 #'
+#' @param colour_groups A vector containing groups variable to which colours are
+#'   assigned. It is needed when the data assigned to `colour` aesthetic are
+#'   not all contained in colour aliases of the palette.
 #' @param ... Other parameters passed on to `ggplot2::discrete_scale()`.
 #'
 #' @return An object of class "ScaleDiscrete".
@@ -22,10 +25,17 @@
 #' ggplot(mpg) +
 #'   geom_histogram(aes(cyl, fill = class), position = "dodge", bins = 5) +
 #'   scale_fill_1in1000()
-scale_colour_1in1000 <- function(...){
+scale_colour_1in1000 <- function(colour_groups = NULL, ...){
+  if (!is.null(colour_groups)) {
+    colour_aliases <- add_colours_missing_names(colour_groups, r2dii.colours::colour_aliases_1in1000)
+  } else {
+    colour_aliases <- r2dii.colours::colour_aliases_1in1000
+  }
+
   scale_color_manual(
-    values = r2dii.colours::colour_aliases_1in1000,
-    na.value = r2dii.colours::colour_aliases_1in1000['grey'],
+    values = colour_aliases,
+    na.value = colour_aliases['na'],
+    labels = as_function(~ make_pretty_labels(.x)),
     ...
     )
 }
@@ -34,10 +44,17 @@ scale_color_1in1000 <- scale_colour_1in1000
 
 #' @rdname scale_colour_1in1000
 #' @export
-scale_fill_1in1000 <- function(...){
+scale_fill_1in1000 <- function(colour_groups = NULL, ...){
+  if (!is.null(colour_groups)) {
+    colour_aliases <- add_colours_missing_names(colour_groups, r2dii.colours::colour_aliases_1in1000)
+  } else {
+    colour_aliases <- r2dii.colours::colour_aliases_1in1000
+  }
+
   scale_fill_manual(
-    values = r2dii.colours::colour_aliases_1in1000,
-    na.value = r2dii.colours::colour_aliases_1in1000['grey'],
+    values = colour_aliases,
+    na.value = colour_aliases['na'],
+    labels = as_function(~ make_pretty_labels(.x)),
     ...
     )
 }

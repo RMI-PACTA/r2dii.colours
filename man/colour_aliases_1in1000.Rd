@@ -6,7 +6,7 @@
 \alias{color_aliases_1in1000}
 \title{Named colour vector associated with 1 in 1000}
 \format{
-An object of class \code{character} of length 42.
+An object of class \code{character} of length 43.
 }
 \usage{
 colour_aliases_1in1000
