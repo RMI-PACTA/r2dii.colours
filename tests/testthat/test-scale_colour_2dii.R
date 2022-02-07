@@ -24,3 +24,45 @@ test_that("changes the plot fill as expected", {
 
   expect_false(identical(colours_default, colours_changed))
 })
+
+test_that("scale_*_colour is sensitive to `colour_groups`", {
+
+  p <- example_plot_scale_colour() +
+    scale_colour_2dii()
+
+  colours_def_par <- unique_data1(p, "colour")
+
+  p2 <- example_plot_scale_colour() +
+    scale_colour_2dii(colour_groups = r2dii.plot::sda$sector)
+
+  colours_col_gr <- unique_data1(p2, "colour")
+
+  expect_false(identical(colours_def_par, colours_col_gr))
+})
+
+test_that("scale_*_fill is sensitive to `colour_groups`", {
+  p <- example_plot_scale_fill() +
+    scale_fill_2dii()
+
+  p2 <- example_plot_scale_fill() +
+    scale_fill_2dii(colour_groups = r2dii.plot::sda$sector)
+
+  colours_def_par <- unique_data1(p, "fill")
+  colours_col_gr <- unique_data1(p2, "fill")
+
+  expect_false(identical(colours_def_par, colours_col_gr))
+})
+
+test_that("warns about assigning colours", {
+  expect_message(
+    example_plot_scale_colour() +
+      scale_colour_2dii(colour_groups = r2dii.plot::sda$sector),
+    regexp = "Assigning colours to unrecognised names in data"
+  )
+  expect_message(
+    example_plot_scale_fill() +
+      scale_fill_2dii(colour_groups = r2dii.plot::sda$sector),
+    regexp = "Assigning colours to unrecognised names in data"
+  )
+})
+
