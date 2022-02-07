@@ -6,12 +6,12 @@
 \alias{scale_fill_2dii}
 \title{Custom 2DII colour and fill scales}
 \usage{
-scale_colour_2dii(scale = c("2dii", "1in1000"), colour_groups = NULL, ...)
+scale_colour_2dii(palette = c("2dii", "1in1000"), colour_groups = NULL, ...)
 
-scale_fill_2dii(scale = c("2dii", "1in1000"), colour_groups = NULL, ...)
+scale_fill_2dii(palette = c("2dii", "1in1000"), colour_groups = NULL, ...)
 }
 \arguments{
-\item{scale}{String with the name of the colour scale to be used. If not
+\item{palette}{String with the name of the colour scale to be used. If not
 specified then the general 2dii scale is used}
 
 \item{colour_groups}{A vector containing groups variable to which colours are
@@ -41,6 +41,6 @@ ggplot(mpg) +
 
 ggplot(sda \%>\% filter(emission_factor_metric == "projected")) +
  geom_line(aes(x = year, y = emission_factor_value, colour = sector)) +
- scale_colour_2dii(colour_groups = sda$sector, scale = "1in1000")
+ scale_colour_2dii(palette = "1in1000", colour_groups = sda$sector)
 }
 \concept{r2dii scales}
