@@ -2,9 +2,7 @@
 
 export("%>%")
 export(get_colours)
-export(scale_colour_1in1000)
 export(scale_colour_2dii)
-export(scale_fill_1in1000)
 export(scale_fill_2dii)
 import(r2dii.plot)
 importFrom(dplyr,arrange)

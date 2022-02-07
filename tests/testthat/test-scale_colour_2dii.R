@@ -53,6 +53,34 @@ test_that("scale_*_fill is sensitive to `colour_groups`", {
   expect_false(identical(colours_def_par, colours_col_gr))
 })
 
+test_that("scale_*_colour is sensitive to `scale`", {
+
+  p <- example_plot_scale_colour() +
+    scale_colour_2dii()
+
+  colours_def_par <- unique_data1(p, "colour")
+
+  p2 <- example_plot_scale_colour() +
+    scale_colour_2dii(scale = "1in1000")
+
+  colours_col_gr <- unique_data1(p2, "colour")
+
+  expect_false(identical(colours_def_par, colours_col_gr))
+})
+
+test_that("scale_*_fill is sensitive to `scale`", {
+  p <- example_plot_scale_fill() +
+    scale_fill_2dii()
+
+  p2 <- example_plot_scale_fill() +
+    scale_fill_2dii(scale = "1in1000")
+
+  colours_def_par <- unique_data1(p, "fill")
+  colours_col_gr <- unique_data1(p2, "fill")
+
+  expect_false(identical(colours_def_par, colours_col_gr))
+})
+
 test_that("warns about assigning colours", {
   expect_message(
     example_plot_scale_colour() +
@@ -65,4 +93,5 @@ test_that("warns about assigning colours", {
     regexp = "Assigning colours to unrecognised names in data"
   )
 })
+
 

@@ -6,14 +6,17 @@
 \alias{scale_fill_2dii}
 \title{Custom 2DII colour and fill scales}
 \usage{
-scale_colour_2dii(colour_groups = NULL, ...)
+scale_colour_2dii(scale = c("2dii", "1in1000"), colour_groups = NULL, ...)
 
-scale_fill_2dii(colour_groups = NULL, ...)
+scale_fill_2dii(scale = c("2dii", "1in1000"), colour_groups = NULL, ...)
 }
 \arguments{
+\item{scale}{String with the name of the colour scale to be used. If not
+specified then the general 2dii scale is used}
+
 \item{colour_groups}{A vector containing groups variable to which colours are
-assigned. It is needed when the data assigned to \code{colour} aesthetic are
-not all contained in colour aliases of the palette.}
+assigned. It is needed when the data assigned to \code{colour} aesthetic are not
+all contained in colour aliases of the palette.}
 
 \item{...}{Other parameters passed on to \code{ggplot2::discrete_scale()}.}
 }
@@ -21,23 +24,23 @@ not all contained in colour aliases of the palette.}
 An object of class "ScaleDiscrete".
 }
 \description{
-A custom discrete colour and fill scales with colours from 2DII palette.
+A custom discrete colour and fill scales with colours from 2DII palettes.
 }
 \examples{
 library(ggplot2, warn.conflicts = FALSE)
 library(r2dii.plot, warn.conflicts = FALSE)
 library(dplyr, warn.conflicts = FALSE)
 
-ggplot(sda \%>\% filter(emission_factor_metric == 'projected')) +
+ggplot(sda \%>\% filter(emission_factor_metric == "projected")) +
  geom_line(aes(x = year, y = emission_factor_value, colour = sector)) +
  scale_colour_2dii()
 
 ggplot(mpg) +
   geom_histogram(aes(cyl, fill = class), position = "dodge", bins = 5) +
   scale_fill_2dii()
-}
-\seealso{
-Other r2dii scales: 
-\code{\link{scale_colour_1in1000}()}
+
+ggplot(sda \%>\% filter(emission_factor_metric == "projected")) +
+ geom_line(aes(x = year, y = emission_factor_value, colour = sector)) +
+ scale_colour_2dii(colour_groups = sda$sector, scale = "1in1000")
 }
 \concept{r2dii scales}
