@@ -20,21 +20,21 @@ colour_aliases_1in1000 <- c(
   black = colours_1in1000$black,
 
   red = colours_1in1000$red,
-  "late transition" = colours_1in1000$red,
-  "late action" = colours_1in1000$red,
-  "high carbon exposure" = colours_1in1000$red,
+  "late_transition" = colours_1in1000$red,
+  "late_action" = colours_1in1000$red,
+  "high_carbon_exposure" = colours_1in1000$red,
 
   blue = colours_1in1000$blue,
-  "no additional action" = colours_1in1000$blue,
+  "no_additional_action" = colours_1in1000$blue,
   "baseline" = colours_1in1000$blue,
-  "medium carbon exposure" = colours_1in1000$blue,
+  "medium_carbon_exposure" = colours_1in1000$blue,
 
   white = colours_1in1000$white,
 
   green = colours_1in1000$green,
-  "early action" = colours_1in1000$green,
-  "sudden transition" = colours_1in1000$green,
-  "low carbon exposure" = colours_1in1000$green,
+  "early_action" = colours_1in1000$green,
+  "sudden_transition" = colours_1in1000$green,
+  "low_carbon_exposure" = colours_1in1000$green,
 
   yellow = colours_1in1000$yellow,
 
@@ -58,6 +58,8 @@ colour_aliases_1in1000 <- c(
   darker_grey = colours_1in1000$darker_grey,
 
   background = colours_1in1000$background,
+
+  "na" = colours_1in1000$grey,
 
   colours_1in1000$black,
   colours_1in1000$red,

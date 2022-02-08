@@ -3,15 +3,15 @@
     Code
       colour_aliases_1in1000
     Output
-                       black                    red        late transition 
+                       black                    red        late_transition 
                    "#000000"              "#F53D3F"              "#F53D3F" 
-                 late action   high carbon exposure                   blue 
+                 late_action   high_carbon_exposure                   blue 
                    "#F53D3F"              "#F53D3F"              "#3d9bf5" 
-        no additional action               baseline medium carbon exposure 
+        no_additional_action               baseline medium_carbon_exposure 
                    "#3d9bf5"              "#3d9bf5"              "#3d9bf5" 
-                       white                  green           early action 
+                       white                  green           early_action 
                    "#FFFFFF"              "#5D9324"              "#5D9324" 
-           sudden transition    low carbon exposure                 yellow 
+           sudden_transition    low_carbon_exposure                 yellow 
                    "#5D9324"              "#5D9324"              "#f5f33d" 
                       violet                    bdf                 orange 
                    "#973df5"              "#973df5"              "#f5973d" 
@@ -21,14 +21,16 @@
                    "#fa9e9f"              "#CDFA9E"              "#BAB6B5" 
                    dark_grey            darker_grey             background 
                    "#8B8888"              "#656262"              "#E9E4E3" 
+                          na                                               
+                   "#BAB6B5"              "#000000"              "#F53D3F" 
                                                                            
-                   "#000000"              "#F53D3F"              "#3d9bf5" 
+                   "#3d9bf5"              "#FFFFFF"              "#5D9324" 
                                                                            
-                   "#FFFFFF"              "#5D9324"              "#f5f33d" 
+                   "#f5f33d"              "#973df5"              "#f5973d" 
                                                                            
-                   "#973df5"              "#f5973d"              "#f53d9b" 
+                   "#f53d9b"              "#fa9e9f"              "#CDFA9E" 
                                                                            
-                   "#fa9e9f"              "#CDFA9E"              "#BAB6B5" 
-                                                                           
-                   "#8B8888"              "#656262"              "#E9E4E3" 
+                   "#BAB6B5"              "#8B8888"              "#656262" 
+                             
+                   "#E9E4E3" 
 

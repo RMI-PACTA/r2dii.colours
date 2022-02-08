@@ -6,7 +6,7 @@
 \alias{color_aliases_2dii}
 \title{Named colour vector associated with 2DII values}
 \format{
-An object of class \code{character} of length 37.
+An object of class \code{character} of length 38.
 }
 \usage{
 colour_aliases_2dii

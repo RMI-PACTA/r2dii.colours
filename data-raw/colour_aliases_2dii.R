@@ -46,11 +46,13 @@ colour_aliases_2dii <- c(
   coal = colours_2dii$brown,
 
   almost_black = colours_2dii$almost_black,
-  "oil&gas" = colours_2dii$almost_black,
-  "oil and gas" = colours_2dii$almost_black,
+  "oil_and_gas" = colours_2dii$almost_black,
+  "fossil_fuels" = colours_2dii$almost_black,
 
   dark_orange = colours_2dii$dark_orange,
   power = colours_2dii$dark_orange,
+
+  "na" = colours_2dii$grey,
 
   # unnamed for matching
   colours_2dii$dark_blue,
