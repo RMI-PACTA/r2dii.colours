@@ -18,6 +18,6 @@ palette.
 \examples{
 colour_aliases_1in1000
 
-colour_aliases_1in1000[c("high carbon exposure", "low carbon exposure")]
+colour_aliases_1in1000[c("high_carbon_exposure", "low_carbon_exposure")]
 }
 \keyword{datasets}
