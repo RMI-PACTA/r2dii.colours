@@ -31,6 +31,17 @@
 #' ggplot(sda %>% filter(emission_factor_metric == "projected")) +
 #'  geom_line(aes(x = year, y = emission_factor_value, colour = sector)) +
 #'  scale_colour_2dii(palette = "1in1000", colour_groups = sda$sector)
+#'
+#'  ggplot(
+#'  market_share %>%
+#'    filter(
+#'    sector == "automotive",
+#'    year %in% c(2020, 2025),
+#'    metric == "projected")) +
+#'  geom_bar(
+#'    stat = "identity",
+#'    aes(x = year, y = technology_share, fill = technology)) +
+#'  scale_fill_2dii(palette = "pacta")
 scale_colour_2dii <- function(
   palette = c("2dii", "1in1000", "pacta"),
   colour_groups = NULL, ...
