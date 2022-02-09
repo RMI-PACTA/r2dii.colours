@@ -81,7 +81,13 @@ test_that("scale_*_fill is sensitive to `palette`", {
   expect_false(identical(colours_def_par, colours_col_gr))
 })
 
-# TODO: with bad palette errors gracefully
+test_that("with bad palette errors gracefully", {
+  bad <- "bad"
+
+  expect_snapshot_error(example_plot_scale_colour() +
+      scale_colour_2dii(palette = "bad"))
+})
+
 # TODO: with bad colour_groups errors gracefully
 
 test_that("warns about assigning colours", {

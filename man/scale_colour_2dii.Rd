@@ -6,9 +6,17 @@
 \alias{scale_fill_2dii}
 \title{Custom 2DII colour and fill scales}
 \usage{
-scale_colour_2dii(palette = c("2dii", "1in1000"), colour_groups = NULL, ...)
+scale_colour_2dii(
+  palette = c("2dii", "1in1000", "pacta"),
+  colour_groups = NULL,
+  ...
+)
 
-scale_fill_2dii(palette = c("2dii", "1in1000"), colour_groups = NULL, ...)
+scale_fill_2dii(
+  palette = c("2dii", "1in1000", "pacta"),
+  colour_groups = NULL,
+  ...
+)
 }
 \arguments{
 \item{palette}{String with the name of the colour scale to be used. If not

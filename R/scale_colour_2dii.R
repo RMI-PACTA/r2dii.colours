@@ -32,7 +32,7 @@
 #'  geom_line(aes(x = year, y = emission_factor_value, colour = sector)) +
 #'  scale_colour_2dii(palette = "1in1000", colour_groups = sda$sector)
 scale_colour_2dii <- function(
-  palette = c("2dii", "1in1000"),
+  palette = c("2dii", "1in1000", "pacta"),
   colour_groups = NULL, ...
   ) {
   colour_aliases <- get_colour_aliases(palette, colour_groups)
@@ -50,7 +50,7 @@ scale_color_2dii <- scale_colour_2dii
 #' @rdname scale_colour_2dii
 #' @export
 scale_fill_2dii <- function(
-  palette = c("2dii", "1in1000"),
+  palette = c("2dii", "1in1000", "pacta"),
   colour_groups = NULL, ...
   ) {
   colour_aliases <- get_colour_aliases(palette, colour_groups)
@@ -64,7 +64,7 @@ scale_fill_2dii <- function(
 }
 
 get_colour_aliases <- function(
-  palette = c("2dii", "1in1000"),
+  palette = c("2dii", "1in1000", "pacta"),
   colour_groups = NULL
   ) {
   if (is.null(palette)) {
@@ -73,7 +73,8 @@ get_colour_aliases <- function(
   palette <- match.arg(palette)
   colour_aliases <- switch(palette,
          "2dii" = r2dii.colours::colour_aliases_2dii,
-         "1in1000" = r2dii.colours::colour_aliases_1in1000
+         "1in1000" = r2dii.colours::colour_aliases_1in1000,
+         "pacta" = r2dii.colours::colour_aliases_pacta
          )
   if (!is.null(colour_groups)) {
     colour_aliases <- add_colours_missing_names(colour_groups, colour_aliases)
