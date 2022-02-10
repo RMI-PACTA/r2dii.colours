@@ -39,24 +39,24 @@ library(ggplot2, warn.conflicts = FALSE)
 library(r2dii.plot, warn.conflicts = FALSE)
 library(dplyr, warn.conflicts = FALSE)
 
-ggplot(sda \%>\% filter(emission_factor_metric == "projected")) +
- geom_line(aes(x = year, y = emission_factor_value, colour = sector)) +
- scale_colour_2dii()
+sda \%>\% filter(emission_factor_metric == "projected") \%>\%
+ ggplot() +
+  geom_line(aes(x = year, y = emission_factor_value, colour = sector)) +
+  scale_colour_2dii()
 
-ggplot(mpg) +
+mpg \%>\%
+ ggplot() +
   geom_histogram(aes(cyl, fill = class), position = "dodge", bins = 5) +
   scale_fill_2dii()
 
-ggplot(sda \%>\% filter(emission_factor_metric == "projected")) +
- geom_line(aes(x = year, y = emission_factor_value, colour = sector)) +
- scale_colour_2dii(palette = "1in1000", colour_groups = sda$sector)
+sda \%>\% filter(emission_factor_metric == "projected") \%>\%
+ ggplot() +
+  geom_line(aes(x = year, y = emission_factor_value, colour = sector)) +
+  scale_colour_2dii(palette = "1in1000", colour_groups = sda$sector)
 
- ggplot(
- market_share \%>\%
-   filter(
-   sector == "automotive",
-   year \%in\% c(2020, 2025),
-   metric == "projected")) +
+market_share \%>\%
+filter(sector == "automotive", year \%in\% c(2020, 2025), metric == "projected") \%>\%
+ggplot() +
  geom_bar(
    stat = "identity",
    aes(x = year, y = technology_share, fill = technology)) +
