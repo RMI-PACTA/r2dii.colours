@@ -30,5 +30,6 @@ Depends:
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Config/Needs/website: 2DegreesInvesting/r2diitemplate
 URL: https://2degreesinvesting.github.io/r2dii.colours,
     https://2degreesinvesting.github.io/r2dii.colours/
