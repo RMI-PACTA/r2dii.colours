@@ -75,42 +75,42 @@
       palette_2dii_power
     Output
       # A tibble: 6 x 2
-        label hex    
-        <chr> <chr>  
-      1 power #7A2701
-      2 power #a63603
-      3 power #e6550d
-      4 power #fd8d3c
-      5 power #fdbe85
-      6 power #ffd4ad
+        label         hex    
+        <chr>         <chr>  
+      1 coalcap       #7A2701
+      2 oilcap        #a63603
+      3 gascap        #e6550d
+      4 nuclearcap    #fd8d3c
+      5 hydrocap      #fdbe85
+      6 renewablescap #ffd4ad
     Code
       palette_2dii_automotive
     Output
       # A tibble: 7 x 2
-        label      hex    
-        <chr>      <chr>  
-      1 automotive #548995
-      2 automotive #609cab
-      3 automotive #6cb0c0
-      4 automotive #78c4d6
-      5 automotive #93cfde
-      6 automotive #aedbe6
-      7 automotive #c9e7ee
+        label        hex    
+        <chr>        <chr>  
+      1 ice_hdv      #548995
+      2 ice          #609cab
+      3 hybrid_hdv   #6cb0c0
+      4 hybrid       #78c4d6
+      5 fuelcell     #93cfde
+      6 electric_hdv #aedbe6
+      7 electric     #c9e7ee
     Code
       palette_2dii_oil_gas
     Output
       # A tibble: 2 x 2
-        label   hex    
-        <chr>   <chr>  
-      1 oil&gas #b9b5b0
-      2 oil&gas #181716
+        label hex    
+        <chr> <chr>  
+      1 gas   #b9b5b0
+      2 oil   #181716
     Code
       palette_2dii_fossil_fuels
     Output
       # A tibble: 3 x 2
-        label        hex    
-        <chr>        <chr>  
-      1 fossil fuels #b9b5b0
-      2 fossil fuels #181716
-      3 fossil fuels #4e3b37
+        label hex    
+        <chr> <chr>  
+      1 gas   #b9b5b0
+      2 oil   #181716
+      3 coal  #4e3b37
 

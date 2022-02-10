@@ -7,28 +7,28 @@ unique_data1 <- function(p, name) {
 example_plot_scale_colour <- function() {
   ggplot2::ggplot(
     r2dii.plot::sda %>%
-      filter(.data$emission_factor_metric == 'projected')
-    ) +
+      filter(.data$emission_factor_metric == "projected")
+  ) +
     ggplot2::geom_line(
       ggplot2::aes(
         x = .data$year,
         y = .data$emission_factor_value,
         colour = .data$sector
-        )
+      )
     )
 }
 
 example_plot_scale_fill <- function() {
   ggplot2::ggplot(
     r2dii.plot::sda %>%
-      filter(.data$emission_factor_metric == 'projected')
-    ) +
+      filter(.data$emission_factor_metric == "projected")
+  ) +
     ggplot2::geom_bar(
       ggplot2::aes(
         x = .data$year,
         y = .data$emission_factor_value,
         fill = .data$sector
-        ),
+      ),
       stat = "identity"
-      )
+    )
 }

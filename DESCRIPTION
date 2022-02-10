@@ -23,7 +23,8 @@ Imports:
     tibble,
     ggplot2,
     r2dii.plot,
-    stringr
+    stringr,
+    stats
 Depends: 
     R (>= 2.10)
 Suggests: 

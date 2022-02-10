@@ -25,37 +25,37 @@ palette_2dii_sector <- tibble::tribble(
 )
 
 palette_2dii_power <- tibble::tribble(
-         ~label,       ~hex,
-         "power", "#7A2701",
-         "power", "#a63603",
-         "power", "#e6550d",
-         "power", "#fd8d3c",
-         "power", "#fdbe85",
-         "power", "#ffd4ad"
+           ~label,      ~hex,
+        "coalcap", "#7A2701",
+         "oilcap", "#a63603",
+         "gascap", "#e6550d",
+     "nuclearcap", "#fd8d3c",
+       "hydrocap", "#fdbe85",
+  "renewablescap", "#ffd4ad"
 )
 
 palette_2dii_automotive <- tibble::tribble(
           ~label,      ~hex,
-    "automotive", "#548995",
-    "automotive", "#609cab",
-    "automotive", "#6cb0c0",
-    "automotive", "#78c4d6",
-    "automotive", "#93cfde",
-    "automotive", "#aedbe6",
-    "automotive", "#c9e7ee"
+       "ice_hdv", "#548995",
+           "ice", "#609cab",
+    "hybrid_hdv", "#6cb0c0",
+        "hybrid", "#78c4d6",
+      "fuelcell", "#93cfde",
+  "electric_hdv", "#aedbe6",
+      "electric", "#c9e7ee"
 )
 
 palette_2dii_oil_gas <- tibble::tribble(
-            ~label,      ~hex,
-         "oil&gas", "#b9b5b0",
-         "oil&gas", "#181716"
+  ~label,      ~hex,
+   "gas", "#b9b5b0",
+   "oil", "#181716"
 )
 
 palette_2dii_fossil_fuels <- tibble::tribble(
-              ~label,      ~hex,
-      "fossil fuels", "#b9b5b0",
-      "fossil fuels", "#181716",
-      "fossil fuels", "#4e3b37"
+  ~label,      ~hex,
+   "gas", "#b9b5b0",
+   "oil", "#181716",
+  "coal", "#4e3b37"
 )
 
 palette_2dii_scenario <- tibble::tribble(
