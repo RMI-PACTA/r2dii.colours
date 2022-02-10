@@ -1,4 +1,6 @@
-url: https://2degreesinvesting.github.io/r2dii.colours
+url: https://2degreesinvesting.github.io/r2dii.colours/
 template:
+  package: r2diitemplate
   bootstrap: 5
+
 
