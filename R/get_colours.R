@@ -19,9 +19,9 @@ get_colours <- function(colour_names = "red", palette = r2dii.colours::palette_1
   check_colour_name(palette, colour_names)
 
   colour_hex <- palette %>%
-      filter(.data$label %in% colour_names) %>%
-      mutate(label = factor(.data$label, levels = colour_names)) %>%
-      arrange(.data$label) %>%
-      pull(.data$hex)
+    filter(.data$label %in% colour_names) %>%
+    mutate(label = factor(.data$label, levels = colour_names)) %>%
+    arrange(.data$label) %>%
+    pull(.data$hex)
   colour_hex
 }

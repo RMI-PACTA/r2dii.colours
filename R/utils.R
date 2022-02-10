@@ -1,5 +1,5 @@
 check_colour_name <- function(palette, colour_name, env = parent.frame()) {
-  .palette = deparse_1(substitute(palette, env = env))
+  .palette <- deparse_1(substitute(palette, env = env))
   if (all(colour_name %in% palette$label)) {
     return(TRUE)
   } else {
@@ -25,7 +25,7 @@ add_colours_missing_names <- function(names, colour_aliases) {
   available_colours <- setdiff(
     all_colours,
     colour_aliases[names]
-    )
+  )
   if (length(missing_names) <= length(available_colours)) {
     missing_aliases <- setNames(available_colours[1:length(missing_names)], missing_names)
     colour_aliases <- c(colour_aliases, missing_aliases)
@@ -46,6 +46,8 @@ add_colours_missing_names <- function(names, colour_aliases) {
 }
 
 get_hex <- function(palette, label) {
-  hex <- palette %>% filter(.data$label == .env$label) %>% pull (.data$hex)
+  hex <- palette %>%
+    filter(.data$label == .env$label) %>%
+    pull(.data$hex)
   hex
 }

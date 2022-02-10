@@ -12,9 +12,9 @@ test_that("Returns expected vector of hex codes", {
 
 test_that("Works with a user-defined palette", {
   user_palette <- tibble::tribble(
-           ~label,      ~hex,
-            "white", "#FFFFFF"
-      )
+    ~label, ~hex,
+    "white", "#FFFFFF"
+  )
   expect_snapshot_output(get_colours(c("white"), palette = user_palette))
 })
 

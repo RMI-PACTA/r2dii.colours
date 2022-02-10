@@ -26,7 +26,6 @@ test_that("changes the plot fill as expected", {
 })
 
 test_that("scale_*_colour is sensitive to `colour_groups`", {
-
   p <- example_plot_scale_colour() +
     scale_colour_2dii()
 
@@ -54,7 +53,6 @@ test_that("scale_*_fill is sensitive to `colour_groups`", {
 })
 
 test_that("scale_*_colour is sensitive to `palette`", {
-
   p <- example_plot_scale_colour() +
     scale_colour_2dii()
 
@@ -85,7 +83,7 @@ test_that("with bad palette errors gracefully", {
   bad <- "bad"
 
   expect_snapshot_error(example_plot_scale_colour() +
-      scale_colour_2dii(palette = "bad"))
+    scale_colour_2dii(palette = "bad"))
 })
 
 # TODO: with bad colour_groups errors gracefully
@@ -102,5 +100,3 @@ test_that("warns about assigning colours", {
     regexp = "Assigning colours to unrecognised names in data"
   )
 })
-
-
