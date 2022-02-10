@@ -47,4 +47,5 @@ add_colours_missing_names <- function(names, colour_aliases) {
 
 get_hex <- function(palette, label) {
   hex <- palette %>% filter(.data$label == .env$label) %>% pull (.data$hex)
+  hex
 }
