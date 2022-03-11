@@ -118,3 +118,33 @@ test_that("scale_*_fill is sensitive to `labels`", {
 
   expect_true(identical(g$plot$scales$scales[[1]]$get_labels(), new_labels))
 })
+
+test_that("scale_*_colour works with different letter cases", {
+  p1 <- ggplot2::ggplot(example_data_lowercase(), ggplot2::aes(x = x, y = val)) +
+    ggplot2::geom_line(ggplot2::aes(colour = variable)) +
+    scale_colour_2dii(palette = "pacta", colour_groups = example_data_lowercase()$variable)
+
+  p2 <- ggplot2::ggplot(example_data_uppercase(), ggplot2::aes(x = x, y = val)) +
+    ggplot2::geom_line(ggplot2::aes(colour = variable)) +
+    scale_colour_2dii(palette = "pacta", colour_groups = example_data_uppercase()$variable)
+
+  colours_lowercase <- unique_data1(p1, "colour")
+  colours_uppercase <- unique_data1(p2, "colour")
+
+  expect_true(identical(colours_lowercase, colours_uppercase))
+})
+
+test_that("scale_*_fill works with different letter cases", {
+  p1 <- ggplot2::ggplot(example_data_lowercase(), ggplot2::aes(x = x, y = val, fill = variable)) +
+    ggplot2::geom_bar(stat = "identity") +
+    scale_fill_2dii(palette = "pacta", colour_groups = example_data_lowercase()$variable)
+
+  p2 <- ggplot2::ggplot(example_data_uppercase(), ggplot2::aes(x = x, y = val, fill = variable)) +
+    ggplot2::geom_bar(stat = "identity") +
+    scale_fill_2dii(palette = "pacta", colour_groups = example_data_uppercase()$variable)
+
+  colours_lowercase <- unique_data1(p1, "fill")
+  colours_uppercase <- unique_data1(p2, "fill")
+
+  expect_true(identical(colours_lowercase, colours_uppercase))
+})

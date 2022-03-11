@@ -32,3 +32,13 @@ example_plot_scale_fill <- function() {
       stat = "identity"
     )
 }
+
+example_data_lowercase <- function() {
+  tibble::tibble(x=rep(1:5, 3), val=sample(1:100, 15),
+                   variable=rep(c("ice", "electric", "hybrid"), 5))
+}
+
+example_data_uppercase <- function() {
+  tibble::tibble(x=rep(1:5, 3), val=sample(1:100, 15),
+                   variable = rep(c("ICE", "Electric", "Hybrid"), 5))
+}
