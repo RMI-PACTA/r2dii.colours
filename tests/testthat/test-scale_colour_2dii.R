@@ -86,8 +86,6 @@ test_that("with bad palette errors gracefully", {
     scale_colour_2dii(palette = "bad"))
 })
 
-# TODO: with bad colour_groups errors gracefully
-
 test_that("warns about assigning colours", {
   expect_message(
     example_plot_scale_colour() +
@@ -99,4 +97,24 @@ test_that("warns about assigning colours", {
       scale_fill_2dii(colour_groups = r2dii.plot::sda$sector),
     regexp = "Assigning colours to unrecognised names in data"
   )
+})
+
+test_that("scale_*_colour is sensitive to `labels`", {
+  new_labels <- c("lab1", "lab2", "lab3", "lab4")
+
+  p <- example_plot_scale_colour() +
+    scale_colour_2dii(labels = new_labels)
+  g <- ggplot2::ggplot_build(p)
+
+  expect_true(identical(g$plot$scales$scales[[1]]$get_labels(), new_labels))
+})
+
+test_that("scale_*_fill is sensitive to `labels`", {
+  new_labels <- c("lab1", "lab2", "lab3", "lab4")
+
+  p <- example_plot_scale_fill() +
+    scale_fill_2dii(labels = new_labels)
+  g <- ggplot2::ggplot_build(p)
+
+  expect_true(identical(g$plot$scales$scales[[1]]$get_labels(), new_labels))
 })

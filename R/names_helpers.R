@@ -7,7 +7,7 @@ standardise_names <- function(names) {
 }
 
 make_pretty_labels <- function(names) {
-  pretty_names <- r2dii.plot:::to_title(names) %>%
+  pretty_names <- r2dii.plot::to_title(names) %>%
     str_replace_all("And", "and")
   pretty_names
 }

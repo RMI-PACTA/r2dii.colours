@@ -9,12 +9,14 @@
 scale_colour_2dii(
   palette = c("2dii", "1in1000", "pacta"),
   colour_groups = NULL,
+  labels = NULL,
   ...
 )
 
 scale_fill_2dii(
   palette = c("2dii", "1in1000", "pacta"),
   colour_groups = NULL,
+  labels = NULL,
   ...
 )
 }
@@ -24,7 +26,12 @@ specified then the general 2dii scale is used}
 
 \item{colour_groups}{A vector containing groups variable to which colours are
 assigned. It is needed when the data assigned to \code{colour} aesthetic are not
-all contained in colour aliases of the palette.}
+all contained in colour aliases of the palette. By default it is null and
+then only names in data that are also found in colour aliases for the
+palette are coloured.}
+
+\item{labels}{Labels parameter to be used in \code{ggplot2::scale_colour_manual}.
+By default it is set to an internal function beatifying the labels.}
 
 \item{...}{Other parameters passed on to \code{ggplot2::discrete_scale()}.}
 }
@@ -39,27 +46,30 @@ library(ggplot2, warn.conflicts = FALSE)
 library(r2dii.plot, warn.conflicts = FALSE)
 library(dplyr, warn.conflicts = FALSE)
 
-sda \%>\% filter(emission_factor_metric == "projected") \%>\%
- ggplot() +
+sda \%>\%
+  filter(emission_factor_metric == "projected") \%>\%
+  ggplot() +
   geom_line(aes(x = year, y = emission_factor_value, colour = sector)) +
   scale_colour_2dii()
 
 mpg \%>\%
- ggplot() +
+  ggplot() +
   geom_histogram(aes(cyl, fill = class), position = "dodge", bins = 5) +
   scale_fill_2dii()
 
-sda \%>\% filter(emission_factor_metric == "projected") \%>\%
- ggplot() +
+sda \%>\%
+  filter(emission_factor_metric == "projected") \%>\%
+  ggplot() +
   geom_line(aes(x = year, y = emission_factor_value, colour = sector)) +
   scale_colour_2dii(palette = "1in1000", colour_groups = sda$sector)
 
 market_share \%>\%
-filter(sector == "automotive", year \%in\% c(2020, 2025), metric == "projected") \%>\%
-ggplot() +
- geom_bar(
-   stat = "identity",
-   aes(x = year, y = technology_share, fill = technology)) +
- scale_fill_2dii(palette = "pacta")
+  filter(sector == "automotive", year \%in\% c(2020, 2025), metric == "projected") \%>\%
+  ggplot() +
+  geom_bar(
+    stat = "identity",
+    aes(x = year, y = technology_share, fill = technology)
+  ) +
+  scale_fill_2dii(palette = "pacta")
 }
 \concept{r2dii scales}

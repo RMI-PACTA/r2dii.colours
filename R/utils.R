@@ -41,7 +41,7 @@ add_colours_missing_names <- function(names, colour_aliases) {
       missing_aliases <- setNames(available_colours[1:length(missing_names_core)], missing_names_core)
       colour_aliases <- c(colour_aliases, missing_aliases)
       inform(glue(
-        "Assigning colours to unrecognised lowercase names in data: {toString(missing_names_core)}."
+        "Assigning colours to unrecognised names in data: {toString(missing_names_core)}."
       ))
     } else {
       abort(

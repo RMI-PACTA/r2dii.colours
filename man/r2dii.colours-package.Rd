@@ -12,6 +12,7 @@ Get colour values from different colour palettes used by 2 Degrees Investing (2D
 Useful links:
 \itemize{
   \item \url{https://2degreesinvesting.github.io/r2dii.colours}
+  \item \url{https://2degreesinvesting.github.io/r2dii.colours/}
 }
 
 }
