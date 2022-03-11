@@ -106,7 +106,7 @@ test_that("scale_*_colour is sensitive to `labels`", {
     scale_colour_2dii(labels = new_labels)
   g <- ggplot2::ggplot_build(p)
 
-  expect_true(identical(g$plot$scales$scales[[1]]$get_labels(), new_labels))
+  expect_true(identical(g$plot$scales$scales[[1]]$labels, new_labels))
 })
 
 test_that("scale_*_fill is sensitive to `labels`", {
@@ -116,7 +116,7 @@ test_that("scale_*_fill is sensitive to `labels`", {
     scale_fill_2dii(labels = new_labels)
   g <- ggplot2::ggplot_build(p)
 
-  expect_true(identical(g$plot$scales$scales[[1]]$get_labels(), new_labels))
+  expect_true(identical(g$plot$scales$scales[[1]]$labels, new_labels))
 })
 
 test_that("scale_*_colour works with different letter cases", {
