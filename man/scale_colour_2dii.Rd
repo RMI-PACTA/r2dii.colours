@@ -31,7 +31,7 @@ then only names in data that are also found in colour aliases for the
 palette are coloured.}
 
 \item{labels}{Labels parameter to be used in \code{ggplot2::scale_colour_manual}.
-By default it is set to an internal function beatifying the labels.}
+By default it is set to an internal function beaudetifying the labels.}
 
 \item{...}{Other parameters passed on to \code{ggplot2::discrete_scale()}.}
 }

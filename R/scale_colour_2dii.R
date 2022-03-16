@@ -10,7 +10,7 @@
 #'   then only names in data that are also found in colour aliases for the
 #'   palette are coloured.
 #' @param labels Labels parameter to be used in `ggplot2::scale_colour_manual`.
-#'   By default it is set to an internal function beatifying the labels.
+#'   By default it is set to an internal function beaudetifying the labels.
 #' @param ... Other parameters passed on to `ggplot2::discrete_scale()`.
 #'
 #' @return An object of class "ScaleDiscrete".
