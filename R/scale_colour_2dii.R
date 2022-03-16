@@ -56,9 +56,7 @@ scale_colour_2dii <- function(
                               ...) {
   colour_aliases <- get_colour_aliases(palette, colour_groups)
 
-  if (is.null(labels)) {
-    labels <- as_function(~ make_pretty_labels(.x))
-  }
+  labels <- labels %||% as_function(~ make_pretty_labels(.x))
 
   scale_color_manual(
     values = colour_aliases,
@@ -79,9 +77,7 @@ scale_fill_2dii <- function(
                             ...) {
   colour_aliases <- get_colour_aliases(palette, colour_groups)
 
-  if (is.null(labels)) {
-    labels <- as_function(~ make_pretty_labels(.x))
-  }
+  labels <- labels %||% as_function(~ make_pretty_labels(.x))
 
   scale_fill_manual(
     values = colour_aliases,
@@ -94,9 +90,8 @@ scale_fill_2dii <- function(
 get_colour_aliases <- function(
                                palette = c("2dii", "1in1000", "pacta"),
                                colour_groups = NULL) {
-  if (is.null(palette)) {
-    palette <- "2dii"
-  }
+  palette <- palette %||% "2dii"
+
   palette <- match.arg(palette)
   colour_aliases <- switch(palette,
     "2dii" = r2dii.colours::colour_aliases_2dii,

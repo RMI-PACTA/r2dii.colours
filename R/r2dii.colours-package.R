@@ -11,6 +11,7 @@
 #' @importFrom glue glue
 #' @importFrom rlang .data
 #' @importFrom rlang .env
+#' @importFrom rlang %||%
 #' @importFrom rlang abort
 #' @importFrom rlang as_function
 #' @importFrom rlang inform
