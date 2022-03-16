@@ -36,7 +36,7 @@ add_colours_missing_names <- function(names, colour_aliases) {
   # add colours to names that are not in aliases
   if (length(missing_names_core) > 0) {
     all_colours <- colour_aliases[names(colour_aliases) == ""]
-    available_colours <- setdiff(all_colours,colour_aliases[c(names, names_lower)])
+    available_colours <- setdiff(all_colours, colour_aliases[c(names, names_lower)])
     if (length(missing_names_core) <= length(available_colours)) {
       missing_aliases <- setNames(available_colours[1:length(missing_names_core)], missing_names_core)
       colour_aliases <- c(colour_aliases, missing_aliases)
