@@ -6,8 +6,8 @@ test_that("outputs a gg ScaleDiscrete", {
 })
 
 test_that("changes the plot colours as expected", {
-  p <- ggplot2::ggplot(ggplot2::mpg) +
-    ggplot2::geom_point(ggplot2::aes(x = displ, y = hwy, colour = class))
+  p <- ggplot(ggplot2::mpg) +
+    ggplot2::geom_point(aes(x = displ, y = hwy, colour = class))
 
   colours_default <- unique_data1(p, "colour")
   colours_changed <- unique_data1(p + scale_colour_2dii(), "colour")
@@ -16,8 +16,8 @@ test_that("changes the plot colours as expected", {
 })
 
 test_that("changes the plot fill as expected", {
-  p <- ggplot2::ggplot(ggplot2::mpg) +
-    ggplot2::geom_histogram(ggplot2::aes(x = cyl, fill = class), position = "dodge", bins = 5)
+  p <- ggplot(ggplot2::mpg) +
+    ggplot2::geom_histogram(aes(x = cyl, fill = class), position = "dodge", bins = 5)
 
   colours_default <- unique_data1(p, "fill")
   colours_changed <- unique_data1(p + scale_fill_2dii(), "fill")
@@ -120,12 +120,12 @@ test_that("scale_*_fill is sensitive to `labels`", {
 })
 
 test_that("scale_*_colour works with different letter cases", {
-  p1 <- ggplot2::ggplot(example_data_lowercase(), ggplot2::aes(x = x, y = val)) +
-    ggplot2::geom_line(ggplot2::aes(colour = variable)) +
+  p1 <- ggplot(example_data_lowercase(), aes(x = x, y = val)) +
+    ggplot2::geom_line(aes(colour = variable)) +
     scale_colour_2dii(palette = "pacta", colour_groups = example_data_lowercase()$variable)
 
-  p2 <- ggplot2::ggplot(example_data_uppercase(), ggplot2::aes(x = x, y = val)) +
-    ggplot2::geom_line(ggplot2::aes(colour = variable)) +
+  p2 <- ggplot(example_data_uppercase(), aes(x = x, y = val)) +
+    ggplot2::geom_line(aes(colour = variable)) +
     scale_colour_2dii(palette = "pacta", colour_groups = example_data_uppercase()$variable)
 
   colours_lowercase <- unique_data1(p1, "colour")
@@ -135,11 +135,11 @@ test_that("scale_*_colour works with different letter cases", {
 })
 
 test_that("scale_*_fill works with different letter cases", {
-  p1 <- ggplot2::ggplot(example_data_lowercase(), ggplot2::aes(x = x, y = val, fill = variable)) +
+  p1 <- ggplot(example_data_lowercase(), aes(x = x, y = val, fill = variable)) +
     ggplot2::geom_bar(stat = "identity") +
     scale_fill_2dii(palette = "pacta", colour_groups = example_data_lowercase()$variable)
 
-  p2 <- ggplot2::ggplot(example_data_uppercase(), ggplot2::aes(x = x, y = val, fill = variable)) +
+  p2 <- ggplot(example_data_uppercase(), aes(x = x, y = val, fill = variable)) +
     ggplot2::geom_bar(stat = "identity") +
     scale_fill_2dii(palette = "pacta", colour_groups = example_data_uppercase()$variable)
 
