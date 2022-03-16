@@ -24,15 +24,15 @@ deparse_1 <- function(expr, collapse = " ", width.cutoff = 500L, ...) {
 add_colours_missing_names <- function(names, colour_aliases) {
   # add colours to names differing by letter case
   names <- unique(names)
-  names_lower <- unique(tolower(names))
-  missing_names_core <- setdiff(names_lower, names(colour_aliases))
+  names_standard <- unique(standardise_names(names))
+  missing_names_core <- setdiff(names_standard, names(colour_aliases))
   missing_names_lettercase <- setdiff(names, names(colour_aliases))
   if (length(missing_names_core) < length(missing_names_lettercase)) {
     names_case_difference <-
       setdiff(missing_names_lettercase, missing_names_core)
     aliases_case_difference <- c()
     for (i in seq_along(names_case_difference)) {
-      colour <- colour_aliases[tolower(names_case_difference[i])]
+      colour <- colour_aliases[standardise_names(names_case_difference[i])]
       aliases_case_difference <- c(
         aliases_case_difference,
         setNames(colour, names_case_difference[i])
@@ -43,7 +43,7 @@ add_colours_missing_names <- function(names, colour_aliases) {
   # add colours to names that are not in aliases
   if (length(missing_names_core) > 0) {
     all_colours <- colour_aliases[names(colour_aliases) == ""]
-    available_colours <- setdiff(all_colours, colour_aliases[c(names, names_lower)])
+    available_colours <- setdiff(all_colours, colour_aliases[c(names, names_standard)])
     if (length(missing_names_core) <= length(available_colours)) {
       missing_aliases <- setNames(
         available_colours[seq_along(missing_names_core)],
