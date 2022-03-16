@@ -6,7 +6,10 @@ check_colour_name <- function(palette, colour_name, env = parent.frame()) {
     abort(
       c(
         glue("No colour in {.palette} with a given `colour_name`."),
-        x = glue("Possible colour names in the palette: {toString(palette$label)}."),
+        x =
+          glue(
+            "Possible colour names in the palette: {toString(palette$label)}."
+          ),
         i = "You can change the palette by specifying the `palette` argument."
       )
     )
@@ -25,11 +28,15 @@ add_colours_missing_names <- function(names, colour_aliases) {
   missing_names_core <- setdiff(names_lower, names(colour_aliases))
   missing_names_lettercase <- setdiff(names, names(colour_aliases))
   if (length(missing_names_core) < length(missing_names_lettercase)) {
-    names_case_difference <- setdiff(missing_names_lettercase, missing_names_core)
+    names_case_difference <-
+      setdiff(missing_names_lettercase, missing_names_core)
     aliases_case_difference <- c()
-    for (i in 1:length(names_case_difference)) {
+    for (i in seq_along(names_case_difference)) {
       colour <- colour_aliases[tolower(names_case_difference[i])]
-      aliases_case_difference <- c(aliases_case_difference, setNames(colour, names_case_difference[i]))
+      aliases_case_difference <- c(
+        aliases_case_difference,
+        setNames(colour, names_case_difference[i])
+      )
     }
     colour_aliases <- c(colour_aliases, aliases_case_difference)
   }
@@ -38,7 +45,10 @@ add_colours_missing_names <- function(names, colour_aliases) {
     all_colours <- colour_aliases[names(colour_aliases) == ""]
     available_colours <- setdiff(all_colours, colour_aliases[c(names, names_lower)])
     if (length(missing_names_core) <= length(available_colours)) {
-      missing_aliases <- setNames(available_colours[1:length(missing_names_core)], missing_names_core)
+      missing_aliases <- setNames(
+        available_colours[seq_along(missing_names_core)],
+        missing_names_core
+      )
       colour_aliases <- c(colour_aliases, missing_aliases)
       inform(glue(
         "Assigning colours to unrecognised names in data: {toString(missing_names_core)}."
