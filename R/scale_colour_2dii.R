@@ -3,10 +3,14 @@
 #' A custom discrete colour and fill scales with colours from 2DII palettes.
 #'
 #' @param palette String with the name of the colour scale to be used. If not
-#'  specified then the general 2dii scale is used
+#'   specified then the general 2dii scale is used
 #' @param colour_groups A vector containing groups variable to which colours are
-#'  assigned. It is needed when the data assigned to `colour` aesthetic are not
-#'  all contained in colour aliases of the palette.
+#'   assigned. It is needed when the data assigned to `colour` aesthetic are not
+#'   all contained in colour aliases of the palette. By default it is null and
+#'   then only names in data that are also found in colour aliases for the
+#'   palette are coloured.
+#' @param labels Labels parameter to be used in `ggplot2::scale_colour_manual`.
+#'   By default it is set to an internal function beaudetifying the labels.
 #' @param ... Other parameters passed on to `ggplot2::discrete_scale()`.
 #'
 #' @return An object of class "ScaleDiscrete".
@@ -47,13 +51,17 @@
 #'   scale_fill_2dii(palette = "pacta")
 scale_colour_2dii <- function(
                               palette = c("2dii", "1in1000", "pacta"),
-                              colour_groups = NULL, ...) {
+                              colour_groups = NULL,
+                              labels = NULL,
+                              ...) {
   colour_aliases <- get_colour_aliases(palette, colour_groups)
+
+  labels <- labels %||% as_function(~ make_pretty_labels(.x))
 
   scale_color_manual(
     values = colour_aliases,
     na.value = colour_aliases["na"],
-    labels = as_function(~ make_pretty_labels(.x)),
+    labels = labels,
     ...
   )
 }
@@ -64,13 +72,17 @@ scale_color_2dii <- scale_colour_2dii
 #' @export
 scale_fill_2dii <- function(
                             palette = c("2dii", "1in1000", "pacta"),
-                            colour_groups = NULL, ...) {
+                            colour_groups = NULL,
+                            labels = NULL,
+                            ...) {
   colour_aliases <- get_colour_aliases(palette, colour_groups)
+
+  labels <- labels %||% as_function(~ make_pretty_labels(.x))
 
   scale_fill_manual(
     values = colour_aliases,
     na.value = colour_aliases["na"],
-    labels = as_function(~ make_pretty_labels(.x)),
+    labels = labels,
     ...
   )
 }
@@ -78,9 +90,8 @@ scale_fill_2dii <- function(
 get_colour_aliases <- function(
                                palette = c("2dii", "1in1000", "pacta"),
                                colour_groups = NULL) {
-  if (is.null(palette)) {
-    palette <- "2dii"
-  }
+  palette <- palette %||% "2dii"
+
   palette <- match.arg(palette)
   colour_aliases <- switch(palette,
     "2dii" = r2dii.colours::colour_aliases_2dii,
