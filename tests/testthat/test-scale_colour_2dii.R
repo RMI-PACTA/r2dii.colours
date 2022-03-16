@@ -89,12 +89,12 @@ test_that("with bad palette errors gracefully", {
 test_that("warns about assigning colours", {
   expect_message(
     example_plot_scale_colour() +
-      scale_colour_2dii(colour_groups = r2dii.plot::sda$sector),
+      scale_colour_2dii("1in1000", colour_groups = r2dii.plot::sda$sector),
     regexp = "Assigning colours to unrecognised names in data"
   )
   expect_message(
     example_plot_scale_fill() +
-      scale_fill_2dii(colour_groups = r2dii.plot::sda$sector),
+      scale_fill_2dii("1in1000", colour_groups = r2dii.plot::sda$sector),
     regexp = "Assigning colours to unrecognised names in data"
   )
 })
