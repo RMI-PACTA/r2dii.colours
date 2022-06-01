@@ -50,7 +50,7 @@
 #'   ) +
 #'   scale_fill_2dii(palette = "pacta")
 scale_colour_2dii <- function(
-                              palette = c("2dii", "1in1000", "pacta"),
+                              palette = c("2dii", "1in1000", "pacta", "survey"),
                               colour_groups = NULL,
                               labels = NULL,
                               ...) {
@@ -71,7 +71,7 @@ scale_color_2dii <- scale_colour_2dii
 #' @rdname scale_colour_2dii
 #' @export
 scale_fill_2dii <- function(
-                            palette = c("2dii", "1in1000", "pacta"),
+                            palette = c("2dii", "1in1000", "pacta", "survey"),
                             colour_groups = NULL,
                             labels = NULL,
                             ...) {
@@ -88,7 +88,7 @@ scale_fill_2dii <- function(
 }
 
 get_colour_aliases <- function(
-                               palette = c("2dii", "1in1000", "pacta"),
+                               palette = c("2dii", "1in1000", "pacta", "survey"),
                                colour_groups = NULL) {
   palette <- palette %||% "2dii"
 
@@ -96,7 +96,8 @@ get_colour_aliases <- function(
   colour_aliases <- switch(palette,
     "2dii" = r2dii.colours::colour_aliases_2dii,
     "1in1000" = r2dii.colours::colour_aliases_1in1000,
-    "pacta" = r2dii.colours::colour_aliases_pacta
+    "pacta" = r2dii.colours::colour_aliases_pacta,
+    "survey" = r2dii.colours::colour_aliases_survey
   )
   if (!is.null(colour_groups)) {
     colour_aliases <- add_colours_missing_names(colour_groups, colour_aliases)
