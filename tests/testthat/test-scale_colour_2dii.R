@@ -32,7 +32,7 @@ test_that("scale_*_colour is sensitive to `colour_groups`", {
   colours_def_par <- unique_data1(p, "colour")
 
   p2 <- example_plot_scale_colour() +
-    scale_colour_2dii(colour_groups = r2dii.plot::sda$sector)
+    scale_colour_2dii(colour_groups = r2dii.plot::sda$region)
 
   colours_col_gr <- unique_data1(p2, "colour")
 
@@ -44,7 +44,7 @@ test_that("scale_*_fill is sensitive to `colour_groups`", {
     scale_fill_2dii()
 
   p2 <- example_plot_scale_fill() +
-    scale_fill_2dii(colour_groups = r2dii.plot::sda$sector)
+    scale_fill_2dii(colour_groups = r2dii.plot::sda$region)
 
   colours_def_par <- unique_data1(p, "fill")
   colours_col_gr <- unique_data1(p2, "fill")
@@ -89,12 +89,12 @@ test_that("with bad palette errors gracefully", {
 test_that("warns about assigning colours", {
   expect_message(
     example_plot_scale_colour() +
-      scale_colour_2dii(colour_groups = r2dii.plot::sda$sector),
+      scale_colour_2dii(colour_groups = r2dii.plot::sda$region),
     regexp = "Assigning colours to unrecognised names in data"
   )
   expect_message(
     example_plot_scale_fill() +
-      scale_fill_2dii(colour_groups = r2dii.plot::sda$sector),
+      scale_fill_2dii(colour_groups = r2dii.plot::sda$region),
     regexp = "Assigning colours to unrecognised names in data"
   )
 })

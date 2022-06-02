@@ -13,7 +13,7 @@ example_plot_scale_colour <- function() {
       ggplot2::aes(
         x = .data$year,
         y = .data$emission_factor_value,
-        colour = .data$sector
+        colour = .data$region
       )
     )
 }
@@ -27,7 +27,7 @@ example_plot_scale_fill <- function() {
       ggplot2::aes(
         x = .data$year,
         y = .data$emission_factor_value,
-        fill = .data$sector
+        fill = .data$region
       ),
       stat = "identity"
     )
