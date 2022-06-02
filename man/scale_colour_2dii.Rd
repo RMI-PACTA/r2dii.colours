@@ -7,14 +7,14 @@
 \title{Custom 2DII colour and fill scales}
 \usage{
 scale_colour_2dii(
-  palette = c("2dii", "1in1000", "pacta"),
+  palette = c("2dii", "1in1000", "pacta", "survey"),
   colour_groups = NULL,
   labels = NULL,
   ...
 )
 
 scale_fill_2dii(
-  palette = c("2dii", "1in1000", "pacta"),
+  palette = c("2dii", "1in1000", "pacta", "survey"),
   colour_groups = NULL,
   labels = NULL,
   ...
