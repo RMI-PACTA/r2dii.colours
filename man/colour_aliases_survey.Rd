@@ -6,7 +6,7 @@
 \alias{color_aliases_survey}
 \title{Named colour vector associated with user survey}
 \format{
-An object of class \code{character} of length 10.
+An object of class \code{character} of length 11.
 }
 \usage{
 colour_aliases_survey

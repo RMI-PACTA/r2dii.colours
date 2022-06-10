@@ -13,4 +13,6 @@
                                 "#5CB24E"                           "#92C891" 
       climate_strategy_whole_organization                    Climate strategy 
                                 "#92C891"                           "#92C891" 
+                                       na 
+                                "#FFFFFF" 
 

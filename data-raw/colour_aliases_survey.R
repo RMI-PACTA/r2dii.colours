@@ -1,7 +1,8 @@
 colours_survey <- list(
   green1 = "#1A8035",
   green2 = "#5CB24E",
-  green3 = "#92C891"
+  green3 = "#92C891",
+  white = "#FFFFFF"
 )
 
 colour_aliases_survey <- c(
@@ -16,7 +17,9 @@ colour_aliases_survey <- c(
 
   green3 = colours_survey$green3,
   climate_strategy_whole_organization = colours_survey$green3,
-  "Climate strategy" = colours_survey$green3
+  "Climate strategy" = colours_survey$green3,
+
+  na = colours_survey$white
 )
 
 usethis::use_data(
