@@ -8,16 +8,16 @@ colours_survey <- list(
 colour_aliases_survey <- c(
   green = colours_survey$green1,
   green1 = colours_survey$green1,
-  climate_goals_annual_reporting = colours_survey$green1,
-  "Annual reporting" = colours_survey$green1,
+  climate_strategy_concrete_goals = colours_survey$green1,
+  "Concrete goals" = colours_survey$green1,
 
   green2 = colours_survey$green2,
-  climate_strategy_concrete_goals = colours_survey$green2,
-  "Concrete goals" = colours_survey$green2,
+  climate_strategy_whole_organization = colours_survey$green2,
+  "Climate strategy" = colours_survey$green2,
 
   green3 = colours_survey$green3,
-  climate_strategy_whole_organization = colours_survey$green3,
-  "Climate strategy" = colours_survey$green3,
+  climate_goals_annual_reporting = colours_survey$green3,
+  "Annual reporting" = colours_survey$green3,
 
   na = colours_survey$white
 )
