@@ -1,17 +1,17 @@
 colours_survey <- list(
-  green1 = "#1A8035",
-  green2 = "#5CB24E",
-  green3 = "#92C891",
-  pink1 = "#803d3e",
-  pink2 = "#af5a5e",
-  pink3 = "#d19899",
+  green1 = "#0F9134",
+  green2 = "#5DC95D",
+  green3 = "#A5D9A6",
+  pink1 = "#B5595A",
+  pink2 = "#E09999",
+  pink3 = "#E8C5C3",
   yellow1 = "#b26a16",
   yellow2 = "#d69032",
   yellow3 = "#f9d775",
-  blue1 = "#045275",
-  blue2 = "#1e8ab6",
-  blue3 = "#85c1e0",
-  blue4 = "#c7d9ea",
+  blue1 = "#0A7DAD",
+  blue2 = "#23BCFF",
+  blue3 = "#85DCFF",
+  blue4 = "#D3F2FD",
   white = "#FFFFFF"
 )
 
