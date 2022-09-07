@@ -4,45 +4,45 @@
       colour_aliases_survey
     Output
                                                     green 
-                                                "#1A8035" 
+                                                "#0F9134" 
                                                    green1 
-                                                "#1A8035" 
+                                                "#0F9134" 
                           climate_strategy_concrete_goals 
-                                                "#1A8035" 
+                                                "#0F9134" 
                                            Concrete goals 
-                                                "#1A8035" 
+                                                "#0F9134" 
                                                    green2 
-                                                "#5CB24E" 
+                                                "#5DC95D" 
                       climate_strategy_whole_organization 
-                                                "#5CB24E" 
+                                                "#5DC95D" 
                                          Climate strategy 
-                                                "#5CB24E" 
+                                                "#5DC95D" 
                                                    green3 
-                                                "#92C891" 
+                                                "#A5D9A6" 
                            climate_goals_annual_reporting 
-                                                "#92C891" 
+                                                "#A5D9A6" 
                                          Annual reporting 
-                                                "#92C891" 
+                                                "#A5D9A6" 
                                                      pink 
-                                                "#803d3e" 
+                                                "#B5595A" 
                                                     pink1 
-                                                "#803d3e" 
+                                                "#B5595A" 
                           table_engagement_exclusion_last 
-                                                "#803d3e" 
+                                                "#B5595A" 
                                     Last resort exclusion 
-                                                "#803d3e" 
+                                                "#B5595A" 
                                                     pink2 
-                                                "#af5a5e" 
+                                                "#E09999" 
       table_climate_measures_asset_classes_underweighting 
-                                                "#af5a5e" 
+                                                "#E09999" 
                                Investments underweighting 
-                                                "#af5a5e" 
+                                                "#E09999" 
                                                     pink3 
-                                                "#d19899" 
+                                                "#E8C5C3" 
            table_climate_measures_asset_classes_exclusion 
-                                                "#d19899" 
+                                                "#E8C5C3" 
                                        Exclusion criteria 
-                                                "#d19899" 
+                                                "#E8C5C3" 
                                                    yellow 
                                                 "#b26a16" 
                                                   yellow1 
@@ -64,31 +64,31 @@
                        Engagement with investee companies 
                                                 "#f9d775" 
                                                      blue 
-                                                "#045275" 
+                                                "#0A7DAD" 
                                                     blue1 
-                                                "#045275" 
+                                                "#0A7DAD" 
                  mortgage_incentives_financing_conditions 
-                                                "#045275" 
+                                                "#0A7DAD" 
                                      Financing conditions 
-                                                "#045275" 
+                                                "#0A7DAD" 
                                                     blue2 
-                                                "#1e8ab6" 
+                                                "#23BCFF" 
                  mortgage_incentives_assessment_inclusion 
-                                                "#1e8ab6" 
+                                                "#23BCFF" 
                          Inclusion in mortgage assessment 
-                                                "#1e8ab6" 
+                                                "#23BCFF" 
                                                     blue3 
-                                                "#85c1e0" 
+                                                "#85DCFF" 
                           mortgage_incentives_pre_finance 
-                                                "#85c1e0" 
+                                                "#85DCFF" 
                               Offer pre-finance solutions 
-                                                "#85c1e0" 
+                                                "#85DCFF" 
                                                     blue4 
-                                                "#c7d9ea" 
+                                                "#D3F2FD" 
                           mortgage_incentives_energy_info 
-                                                "#c7d9ea" 
+                                                "#D3F2FD" 
                            Energy performance information 
-                                                "#c7d9ea" 
+                                                "#D3F2FD" 
                                                        na 
                                                 "#FFFFFF" 
 
